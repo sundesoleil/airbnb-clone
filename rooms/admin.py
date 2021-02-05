@@ -82,15 +82,19 @@ class RoomAdmin(admin.ModelAdmin):
         "house_rules",
     )
 
-    def save_model(self, request, obj, form, change):
-        obj.user = request.user
-        super().save_model(request, obj, form, change)
+    # def save_model(self, request, obj, form, change):
+    #     obj.user = request.user
+    #     super().save_model(request, obj, form, change)
 
     def count_amenities(self, obj):  # obj는 현재 row
         return obj.amenities.count()
 
+    count_amenities.short_description = "Amenity Count"
+
     def count_photos(self, obj):
         return obj.photos.count()
+
+    count_photos.short_description = "Photo Count"
 
 
 @admin.register(models.Photo)
