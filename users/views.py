@@ -22,7 +22,7 @@ class LoginView(FormView):
 
     """def get(self, request):
         form = forms.LoginForm(initial={"email": "dxrans@gmail.com"})
-        return render(request, "users/login.html", {"form": form})
+        return render(request, "users/login.html", {"form2": form})
 
     def post(self, request):
         form = forms.LoginForm(request.POST)
@@ -39,3 +39,20 @@ class LoginView(FormView):
 def log_out(request):
     logout(request)
     return redirect(reverse("core:home"))
+
+
+class SignUpView(FormView):
+    template_name = "users/signup.html"
+    form_class = forms.SignUpForm
+    success_url = reverse_lazy("core:home")  # lazy : 바로 실행하지 않음
+    initial = {"first_name": "Seon", "last_name": "Choi", "email": "dxrans@gmail.com"}
+
+    # form이 유효하다면 form.save 실행
+    def form_valid(self, form):
+        form.save()
+        email = form.cleaned_data.get("email")
+        password = form.cleaned_data.get("password")
+        user = authenticate(self.request, username=email, password=password)
+        if user is not None:
+            login(self.request, user)
+        return super().form_valid(form)
