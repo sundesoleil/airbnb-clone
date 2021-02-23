@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+
+.search-box {
+  transition: box-shadow 0.3s linear;
+}
+
+.nav_link {
+  @apply ml-4 mr-5 rounded-full p-3;
+  &:hover {
+    @apply bg-gray-100;
+  }
+}
+
+@tailwind utilities;
