@@ -47,11 +47,6 @@ class SignUpView(FormView):
     template_name = "users/signup.html"
     form_class = forms.SignUpForm
     success_url = reverse_lazy("core:home")  # lazy : 바로 실행하지 않음
-    initial = {
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-    }
 
     # form이 유효하다면 form.save 실행
     def form_valid(self, form):

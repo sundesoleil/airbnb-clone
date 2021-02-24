@@ -5,26 +5,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{% block page_title %}{% endblock page_title %}| Nbnb</title>
+    
   </head>
 
-  <body class="text-gray-800 mt-24" >
+  <body class="text-gray-800 mt-24  font-light" >
     <header class="container max-w-full flex items-center justify-between px-6 h-20 border-b border-gray-300 fixed bg-white inset-0">
     <div class = "flex items-center w-1/3">
       <a href = "{% url "core:home" %}" class="mr-2">
-          <img class="ml-5 w-7 mr-8" src = "{% static 'img/logo.png' %}"/>
+          <img class="w-8" src = "{% static 'img/logo.png' %}"/>
       </a>
-      <p class="text-logo font-bold text-2xl">airbnb</p>
-        {% block search-bar %}
-     
-          <form method="get" action="{% url "rooms:search" %}" class="w-9/12 ">
-            <input class="ml-80 w-full search-box placeholder-gray-600 font-medium border px-5 py-3 rounded-full w-64 shadow-md hover:shadow-lg focus:outline-none"
+      <span class="text-logo font-extrabold text-xl">airbnb</span>   
+      {% block search-bar %}
+          <form method="get" action="{% url "rooms:search" %}" class="w-9/12">
+            <input class="ml-50vh w-full search-box placeholder-gray-600 font-medium border px-5 py-3 rounded-full w-64 shadow-md hover:shadow-lg focus:outline-none mt-3"
             name="city" placeholder="Search by City" />
-
-          </form>
-      
-        {% endblock search-bar %}
+       </form>
+      {% endblock search-bar %}
       </div>
       {% include "partials/nav.html" %} 
     </header>

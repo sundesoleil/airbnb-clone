@@ -1,14 +1,41 @@
 @tailwind base;
 @tailwind components;
 
+@import url("https://fonts.googleapis.com/css?family=Niramit&display=swap");
+
 .search-box {
   transition: box-shadow 0.3s linear;
 }
 
 .nav_link {
-  @apply ml-4 mr-5 rounded-full p-3;
+  @apply ml-4 mr-5 rounded-full px-5 py-3 text-base;
   &:hover {
     @apply bg-gray-100;
+  }
+}
+
+.btn {
+  @apply text-center rounded-sm py-5 font-light text-lg w-full;
+}
+
+input {
+  @apply rounded-sm py-5 font-light text-lg w-full text-left border border-gray-500 px-5;
+  &:focus {
+    @apply border-2;
+  }
+}
+
+form {
+  input {
+    @apply mb-3;
+    &.has_error {
+      input {
+        @apply bg-red-200 border-gray-600;
+        &:focus {
+          @apply border-gray-600;
+        }
+      }
+    }
   }
 }
 
