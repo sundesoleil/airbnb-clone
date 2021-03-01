@@ -14,29 +14,22 @@ class User(AbstractUser):
 
     GENDER_FEMALE = "female"
     GENDER_MALE = "male"
-    GENDER_OTHRE = "other"
+    GENDER_OTHER = "other"
 
     GENDER_CHOICES = (
         (GENDER_FEMALE, "Female"),
         (GENDER_MALE, "Male"),
-        (GENDER_OTHRE, "Other"),
+        (GENDER_OTHER, "Other"),
     )
 
     LANGUAGE_KOREAN = "kr"
     LANGUAGE_ENGLSIH = "en"
 
-    LANGUAGE_CHOICES = (
-        (LANGUAGE_KOREAN, "Korean"),
-        (LANGUAGE_ENGLSIH, "English"),
-    )
 
     CURRENCY_KRW = "krw"
     CURRENCY_USD = "usd"
 
-    CURRENCY_CHOICES = (
-        (CURRENCY_KRW, "KRW"),
-        (CURRENCY_USD, "USD"),
-    )
+    CURRENCY_CHOICES = ((CURRENCY_KRW, "KRW"), (CURRENCY_USD, "USD"))
 
     LOGIN_EMAIL = "email"
     LOGIN_GITHUB = "github"
