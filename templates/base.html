@@ -20,7 +20,7 @@
       <span class="text-logo font-extrabold text-xl">airbnb</span>   
       {% block search-bar %}
           <form method="get" action="{% url "rooms:search" %}" class="w-9/12">
-            <input class="ml-5 w-full search-box placeholder-gray-600 font-medium border px-5 py-3 rounded-full w-64 shadow-md hover:shadow-lg focus:outline-none mt-3"
+            <input class="ml-5 w-full search-box placeholder-gray-600 font-medium border mb-3 px-5 py-3 rounded-full w-64 shadow-md hover:shadow-lg focus:outline-none mt-3"
             name="city" placeholder="Search by City" />
        </form>
       {% endblock search-bar %}

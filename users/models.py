@@ -25,6 +25,7 @@ class User(AbstractUser):
     LANGUAGE_KOREAN = "kr"
     LANGUAGE_ENGLSIH = "en"
 
+    LANGUAGE_CHOICES = ((LANGUAGE_KOREAN, "Korean"), (LANGUAGE_ENGLSIH, "English"))
 
     CURRENCY_KRW = "krw"
     CURRENCY_USD = "usd"
