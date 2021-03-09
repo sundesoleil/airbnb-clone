@@ -140,3 +140,4 @@ cython_debug/
 # windows
 uploads/
 node_modules/
+locale/
