@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{% block page_title %}{% endblock page_title %}| Nbnb</title>
-
   </head>
+
   <body class="text-gray-800 mt-24  font-light" >
     {% include "partials/messages.html" %}
     <header class="container max-w-full flex items-center justify-between px-6 h-24 border-b border-gray-200 fixed bg-white inset-0">
@@ -23,16 +23,23 @@
       {% block search-bar %}
           <form method="get" action="{% url "rooms:search" %}" class="w-9/12">
             <input class="ml-5 w-full search-box placeholder-gray-600 font-medium border mb-3 px-5 py-3 rounded-full w-64 shadow-md hover:shadow-lg focus:outline-none mt-3"
-            name="city" placeholder="Search by City" />
+            name="city" 
+            placeholder="{% trans 'Search by City' %}" 
+            />
        </form>
       {% endblock search-bar %}
         </div>
       {% include "partials/nav.html" %} 
-      
-
     </header>
-
     {% block content %}{% endblock %} 
     {% include "partials/footer.html" %}
+    <script>
+      const langSelect = document.getElementById("js-lang");
+      const handleLangChange = () => {
+        const selected = langSelect.value;
+        fetch(`{% url 'users:switch-language' %}?lang=${selected}`).then(() => window.location.reload());
+      }
+      langSelect.addEventListener("change", handleLangChange);
+    </script>
   </body>
 </html>
