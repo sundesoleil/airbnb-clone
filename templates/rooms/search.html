@@ -19,6 +19,7 @@
     <h3>Results</h3>
 
     {% for room in rooms %}
+    <div class="h-full w-1/2 bg-cover" style="background-image:url({{room.first_photo}})"></div>
         <h3>{{room.name}}</h3>
     {% endfor %}
 {% endblock content%}
