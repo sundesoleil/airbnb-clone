@@ -28,43 +28,43 @@ msgstr "모든 권리는 저작권자에게 있습니다"
 
 #: .\templates\partials\nav.html:8
 msgid "Stop hosting"
-msgstr ""
+msgstr "호스팅 중지"
 
 #: .\templates\partials\nav.html:10
 msgid "Start hosting"
-msgstr ""
+msgstr "호스팅 시작"
 
 #: .\templates\partials\nav.html:16
 msgid "Create Room"
-msgstr ""
+msgstr "방 생성"
 
 #: .\templates\partials\nav.html:18
 msgid "Favorites"
-msgstr ""
+msgstr "즐겨찾기"
 
 #: .\templates\partials\nav.html:19
 msgid "Profile"
-msgstr ""
+msgstr "프로필"
 
 #: .\templates\partials\nav.html:20
 msgid "Log out"
-msgstr ""
+msgstr "로그아웃"
 
 #: .\templates\partials\nav.html:22
 msgid "Log in"
-msgstr ""
+msgstr "로그인"
 
 #: .\templates\partials\nav.html:23
 msgid "Sign up"
-msgstr ""
+msgstr "회원가입"
 
 #: .\templates\rooms\room_detail.html:34
 msgid "Remove from Favorites "
-msgstr ""
+msgstr "즐겨찾기 제거"
 
 #: .\templates\rooms\room_detail.html:36
 msgid "Save to Favorites "
-msgstr ""
+msgstr "즐겨찾기 저장"
 
 #: .\templates\rooms\room_list.html:29
 #, python-format

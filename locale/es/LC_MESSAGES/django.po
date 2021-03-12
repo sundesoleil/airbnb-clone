@@ -28,43 +28,43 @@ msgstr "Todos los derechos reservados"
 
 #: .\templates\partials\nav.html:8
 msgid "Stop hosting"
-msgstr ""
+msgstr "suspensión de la selección"
 
 #: .\templates\partials\nav.html:10
 msgid "Start hosting"
-msgstr ""
+msgstr "abrir la feria"
 
 #: .\templates\partials\nav.html:16
 msgid "Create Room"
-msgstr ""
+msgstr "hacer sitio"
 
 #: .\templates\partials\nav.html:18
 msgid "Favorites"
-msgstr ""
+msgstr "aficionado"
 
 #: .\templates\partials\nav.html:19
 msgid "Profile"
-msgstr ""
+msgstr "perfil"
 
 #: .\templates\partials\nav.html:20
 msgid "Log out"
-msgstr ""
+msgstr "escala logarítmica"
 
 #: .\templates\partials\nav.html:22
 msgid "Log in"
-msgstr ""
+msgstr "escala logarítmica"
 
 #: .\templates\partials\nav.html:23
 msgid "Sign up"
-msgstr ""
+msgstr "registrar"
 
 #: .\templates\rooms\room_detail.html:34
 msgid "Remove from Favorites "
-msgstr ""
+msgstr "desencanto de la búsqueda"
 
 #: .\templates\rooms\room_detail.html:36
 msgid "Save to Favorites "
-msgstr ""
+msgstr "Entusiasmado"
 
 #: .\templates\rooms\room_list.html:29
 #, python-format
