@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-12 17:47+0900\n"
+"POT-Creation-Date: 2021-03-13 14:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,38 +79,38 @@ msgstr "No puedo ir allí"
 msgid "Page not found"
 msgstr "Página no encontrada"
 
-#: .\users\models.py:21
+#: .\users\models.py:22
 msgid "Female"
 msgstr "Mujer"
 
-#: .\users\models.py:22
+#: .\users\models.py:23
 msgid "Male"
 msgstr "Hombre"
 
-#: .\users\models.py:23
+#: .\users\models.py:24
 msgid "Other"
 msgstr "Otro"
 
-#: .\users\models.py:30
+#: .\users\models.py:31
 msgid "Korean"
 msgstr "Coreano"
 
-#: .\users\models.py:31
+#: .\users\models.py:32
 msgid "English"
 msgstr "Ingles"
 
-#: .\users\models.py:51
+#: .\users\models.py:52
 msgid "gender"
 msgstr "genero"
 
-#: .\users\models.py:53
+#: .\users\models.py:54
 msgid "bio"
 msgstr "biografia"
 
-#: .\users\models.py:56
+#: .\users\models.py:57
 msgid "language"
 msgstr "lenguage"
 
-#: .\users\models.py:83
+#: .\users\models.py:86
 msgid "Verify Airbnb Account"
 msgstr "Verificar Cuenta de Airbnb"

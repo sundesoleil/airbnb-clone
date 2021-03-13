@@ -12,7 +12,6 @@ from core import managers as core_managers
 
 # Create your models here.
 class User(AbstractUser):
-    """ Custom User Model """
 
     GENDER_FEMALE = "female"
     GENDER_MALE = "male"
@@ -47,6 +46,7 @@ class User(AbstractUser):
         (LOGIN_KAKAO, "Kakao"),
     )
 
+    first_name = models.CharField(_("first name"), max_length=30, blank=True, null=True)
     avatar = models.ImageField(upload_to="avatars", blank=True)
     gender = models.CharField(
         _("gender"), choices=GENDER_CHOICES, max_length=10, blank=True
@@ -69,8 +69,7 @@ class User(AbstractUser):
     login_method = models.CharField(
         choices=LOGIN_CHOICES, max_length=50, default=LOGIN_EMAIL
     )
-
-    objects = core_managers.CustomModelManager()
+    objects = core_managers.CustomUserManager()
 
     def get_absolute_url(self):
         return reverse("users:profile", kwargs={"pk": self.pk})

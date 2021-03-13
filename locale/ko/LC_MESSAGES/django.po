@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-12 17:46+0900\n"
+"POT-Creation-Date: 2021-03-13 14:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,38 +79,38 @@ msgstr "접근 권한이 없습니다"
 msgid "Page not found"
 msgstr "페이지를 찾을 수 없습니다"
 
-#: .\users\models.py:21
+#: .\users\models.py:22
 msgid "Female"
 msgstr "여성"
 
-#: .\users\models.py:22
+#: .\users\models.py:23
 msgid "Male"
 msgstr "남성"
 
-#: .\users\models.py:23
+#: .\users\models.py:24
 msgid "Other"
 msgstr "기타"
 
-#: .\users\models.py:30
+#: .\users\models.py:31
 msgid "Korean"
 msgstr "한국어"
 
-#: .\users\models.py:31
+#: .\users\models.py:32
 msgid "English"
 msgstr "영어"
 
-#: .\users\models.py:51
+#: .\users\models.py:52
 msgid "gender"
 msgstr "성별"
 
-#: .\users\models.py:53
+#: .\users\models.py:54
 msgid "bio"
 msgstr "자기소개"
 
-#: .\users\models.py:56
+#: .\users\models.py:57
 msgid "language"
 msgstr "언어"
 
-#: .\users\models.py:83
+#: .\users\models.py:86
 msgid "Verify Airbnb Account"
 msgstr "에어비엔비 계정을 확인해주세요"

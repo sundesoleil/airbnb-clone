@@ -48,6 +48,12 @@
                     </div>
                 {% endfor %}
             {% endif %}
+            <form class="mt-10 w-1/2 mx-auto" method="POST">
+                {% csrf_token %}
+                <!-- {{form.message}}  -->
+                <input class="border-box mb-3" name="message" placeholder="Write a Message" required>
+                <button class="btn-link mt-1">Send Comment</button>
+            </form>
         </div>
 
     </div>

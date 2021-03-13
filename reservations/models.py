@@ -36,8 +36,12 @@ class Reservation(core_models.TimeStampedModel):
     )
     check_in = models.DateField()
     check_out = models.DateField()
-    guest = models.ForeignKey("users.User", on_delete=models.CASCADE)
-    room = models.ForeignKey("rooms.Room", on_delete=models.CASCADE)
+    guest = models.ForeignKey(
+        "users.User", related_name="reservations", on_delete=models.CASCADE
+    )
+    room = models.ForeignKey(
+        "rooms.Room", related_name="reservations", on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f"{self.room} - {self.check_in}"
@@ -67,7 +71,6 @@ class Reservation(core_models.TimeStampedModel):
             ).exists()
             if not existing_booked_day:
                 super().save(*args, **kwargs)
-
                 for i in range(difference.days + 1):
                     day = start + datetime.timedelta(days=i)
                     BookedDay.objects.create(day=day, reservation=self)

@@ -132,9 +132,9 @@ class EditRoomView(user_mixins.LoggedInOnlyView, UpdateView):
 
     def get_object(self, queryset=None):
         room = super().get_object(queryset=queryset)
-        if room.host.pk == self.request.user.pk:
-            return room
-        raise Http404()
+        if room.host.pk != self.request.user.pk:
+            raise Http404()
+        return room
 
 
 class RoomPhotosView(user_mixins.LoggedInOnlyView, DetailView):
