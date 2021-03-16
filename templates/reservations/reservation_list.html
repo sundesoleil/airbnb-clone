@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+   {{user.first_name}}'s' Reservation 
+{% endblock page_title %}
+
+{% block search-bar %}
+{% endblock search-bar %}
+
+{% block content %}
+<div class="min-h-75vh text-center">
+  <h3 class="mb-12 text-2xl text-center mt-12 pt-10">{{user.first_name}}'s Reservation </h3>
+
+    {% for booking in bookings %}
+    <div class="container-md mx-auto w-1/2 flex flex-col border rounded-xl shadow-sm px-8 py-6 mt-4">
+      <img src="{{booking.room.first_photo}}">
+      <span class="mt-5 text-lg my-2 truncate">{{booking.room.name}}
+        <span class="mb-3 ml-3 text-sm {% if booking.status == 'pending' %} text-yellow-600 
+        {% elif booking.status == 'canceled' %} text-red-600 
+        {% else %} text-green-600 {% endif %}">{{booking.status}}</span></span>
+      <span class="text-gray-600">Check In | {{booking.check_in}}</span>
+      <span class="text-gray-600 mb-5">Check Out | {{booking.check_out}} </span>
+      {% if booking.status == 'pending' %}
+          <a href="{% url 'reservations:edit' booking.pk 'cancel' %}" class="btn-link block px-3 mb-5">Cancel Reservation</a> 
+          {% if booking.room.host == user %}
+              <a href="{% url 'reservations:edit' booking.pk 'confirm' %}" class="btn-link block px-5">Confirm Reservation</a>  
+              {% endif %}
+      {% endif %}  
+    </div> 
+    {% endfor %}
+</div>
+{% endblock content %} 
+
+

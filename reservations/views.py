@@ -1,7 +1,7 @@
 import datetime
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
-from django.views.generic import View, TemplateView
+from django.views.generic import View
 from django.contrib import messages
 from django.shortcuts import render, redirect, reverse
 from rooms import models as room_models
@@ -66,6 +66,7 @@ def edit_reservation(request, pk, verb):
     return redirect(reverse("reservations:detail", kwargs={"pk": reservation.pk}))
 
 
-class SeeMyReservationView(TemplateView):
-
-    template_name = "reservations/reservation.html"
+def booking_list(request):
+    bookings = models.Reservation.objects.filter(guest=request.user)
+    context = {"bookings": bookings}
+    return render(request, "reservations/reservation_list.html", context)
