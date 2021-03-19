@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-13 14:58+0900\n"
+"POT-Creation-Date: 2021-03-18 21:23+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,18 +43,22 @@ msgid "Favorites"
 msgstr "aficionado"
 
 #: .\templates\partials\nav.html:19
+msgid "See Reservation"
+msgstr "referencia de reserva"
+
+#: .\templates\partials\nav.html:20
 msgid "Profile"
 msgstr "perfil"
 
-#: .\templates\partials\nav.html:20
+#: .\templates\partials\nav.html:21
 msgid "Log out"
 msgstr "escala logarítmica"
 
-#: .\templates\partials\nav.html:22
+#: .\templates\partials\nav.html:23
 msgid "Log in"
 msgstr "escala logarítmica"
 
-#: .\templates\partials\nav.html:23
+#: .\templates\partials\nav.html:24
 msgid "Sign up"
 msgstr "registrar"
 
@@ -71,6 +75,14 @@ msgstr "Entusiasmado"
 msgid "Page %(current_page)s of %(total_pages)s"
 msgstr "Pagina %(current_page)s de %(total_pages)s"
 
+#: .\templates\rooms\search.html:12
+msgid "Where do you want to go?"
+msgstr "¿A dónde?"
+
+#: .\templates\rooms\search.html:19
+msgid "Result"
+msgstr "consecuencia"
+
 #: .\users\mixins.py:13 .\users\mixins.py:25
 msgid "Can't access"
 msgstr "No puedo ir allí"
@@ -79,25 +91,29 @@ msgstr "No puedo ir allí"
 msgid "Page not found"
 msgstr "Página no encontrada"
 
-#: .\users\models.py:22
+#: .\users\models.py:21
 msgid "Female"
 msgstr "Mujer"
 
-#: .\users\models.py:23
+#: .\users\models.py:22
 msgid "Male"
 msgstr "Hombre"
 
-#: .\users\models.py:24
+#: .\users\models.py:23
 msgid "Other"
 msgstr "Otro"
 
-#: .\users\models.py:31
+#: .\users\models.py:30
 msgid "Korean"
 msgstr "Coreano"
 
-#: .\users\models.py:32
+#: .\users\models.py:31
 msgid "English"
 msgstr "Ingles"
+
+#: .\users\models.py:49
+msgid "first name"
+msgstr "Nombre"
 
 #: .\users\models.py:52
 msgid "gender"
@@ -111,6 +127,6 @@ msgstr "biografia"
 msgid "language"
 msgstr "lenguage"
 
-#: .\users\models.py:86
+#: .\users\models.py:85
 msgid "Verify Airbnb Account"
 msgstr "Verificar Cuenta de Airbnb"

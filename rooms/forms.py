@@ -20,12 +20,12 @@ class SearchForm(forms.Form):
     amenities = forms.ModelMultipleChoiceField(
         required=False,
         queryset=models.Amenity.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
+        widget=forms.SelectMultiple,
     )
     facilities = forms.ModelMultipleChoiceField(
         required=False,
         queryset=models.Facility.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
+        widget=forms.SelectMultiple,
     )
 
 
@@ -70,7 +70,5 @@ class CreateRoomForm(forms.ModelForm):
 
     def save(self, *args, **kwargs):
         # super method에 False값을 Pass하면 object를 생성하나, db엔 저장 X
-        room = super().save(
-            commit=False
-        )  
+        room = super().save(commit=False)
         return room

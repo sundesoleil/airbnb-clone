@@ -141,3 +141,7 @@ cython_debug/
 uploads/
 node_modules/
 locale/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
