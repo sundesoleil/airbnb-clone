@@ -1,5 +1,5 @@
 # 에어비앤비 클론
-[노마드코더 에어비앤비 클론코딩](https://nomadcoders.co/airbnb-clone, "nomadcoder link") 강의를 바탕으로 에어비앤비 사이트를 클론 코딩
+[노마드코더 에어비앤비 클론코딩](https://nomadcoders.co/airbnb-clone) 강의를 바탕으로 에어비앤비 사이트를 클론 코딩
 
 # 개발 환경
 Python, Django, tailwind css
